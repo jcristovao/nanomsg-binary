@@ -32,7 +32,6 @@ module Network.Nanomsg.Binary
   , bind
   , connect
   , send
-  , send'
   , recv
   , recv'
   , subscribe
@@ -76,13 +75,6 @@ send
   -> dat
   -> IO ()
 send s d = NM.send s (toStrict . encode $ d)
-
-send'
-  :: (Sender s, Binary dat)
-  => Socket s
-  -> dat
-  -> IO ()
-send' s d = NM.send s (toStrict . encode $ d)
 
 recv
   :: (Receiver s, Binary dat)
