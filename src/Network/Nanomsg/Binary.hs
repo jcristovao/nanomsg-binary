@@ -20,8 +20,8 @@ module Network.Nanomsg.Binary
   , Socket
   , Endpoint
   , NNException(..)
-  , eTERM
-  , eFSM
+--  , eTERM
+--  , eFSM
   , SocketType
   , Sender
   , Receiver
@@ -65,8 +65,8 @@ module Network.Nanomsg.Binary
   ) where
 
 import Control.Applicative
-import Network.Nanomsg hiding (send,send',recv,recv')
-import qualified Network.Nanomsg as NM
+import Nanomsg hiding (send,send',recv,recv')
+import qualified Nanomsg as NM
 import Data.Binary
 import Data.ByteString.Lazy
 
